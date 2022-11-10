@@ -26,8 +26,7 @@ If you have any issues with this code, simply remove any code blocks marked "Dyn
 
   /* *** Dynamic Selectors Start *** */
   validCombo(inputValue,optionLevel,selectedOptions) {
-	const jsonElements = document.querySelectorAll('script[type="application/json"]');
-    const productJson = JSON.parse(jsonElements[1].textContent);
+    const productJson = JSON.parse(this.querySelector('[type="application/json"]').textContent);
     let validCombo = new Boolean(false);
     
 	if(optionLevel == 1) {
