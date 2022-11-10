@@ -3,6 +3,7 @@ This small JS replacement will modify Shopify's option system to dynamically hid
 
 ## Desired Outcome
 By the end of this installation, you too can have user friendly option lists.
+
 ![Dynamic Selectors in action](/dynamic-selectors.gif?v=1)
 
 ## Prerequisites
