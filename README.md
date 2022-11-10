@@ -70,7 +70,6 @@ If you have any issues with this code, simply remove any code blocks marked "Dyn
 			});
             const masterSelectInput = fieldsets[index - 1].querySelector('input:checked');
             const masterSelectLabel = fieldsets[index - 1].querySelector(`label[for="${masterSelectInput.id}"]`);
-            console.log(masterSelectInput + ': ' + (masterSelectLabel.style.display == 'none'))
             if(masterSelectLabel.style.display == 'none') {
               legend.classList.add('hidden');
             } else {
