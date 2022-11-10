@@ -1,5 +1,5 @@
 # Dynamic Selectors
-This small JS replacement will modify Shopify's option system to dynamically hide options from the user that don't exist. This current build will only work with pill selectors, not drop down boxes.
+This small JS hack will modify Shopify's option system to dynamically hide options from the user that don't exist. This current build will only work with pill selectors, not drop down boxes.
 
 ## Desired Outcome
 By the end of this installation, you too can have user friendly option lists.
