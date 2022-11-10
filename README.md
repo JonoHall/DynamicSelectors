@@ -1,11 +1,12 @@
 # Dynamic Selectors
-This small JS replacement will modify Shopify's option system to dynamically hide options from the user that don't exist. 
+This small JS replacement will modify Shopify's option system to dynamically hide options from the user that don't exist. This current build will only work with pill selectors, not drop down boxes.
 
 ## Desired Outcome
 ![Dynamic Selectors in action](/dynamic-selectors.gif?v=1)
 
 ## Prerequisites
-Shopify 2.0 Dawn Theme (currently tested on 7.x).
+1. Shopify 2.0 Dawn Theme (currently tested on 7.x).
+2. Product page must be configured with pill selectors (not drop down boxes).
 
 ## Warnings
 1. *This is an advanced tutorial and should only be done if you have some understanding of coding.* The author of this file cannot offer gaurantees, warantees, or support for using this.
