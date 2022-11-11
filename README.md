@@ -18,7 +18,18 @@ By the end of this installation, you too can have user friendly option lists.
 If you have any issues with this code, simply remove any code blocks marked "Dynamic Selectors Start"/"Dynamic Selectors End"
 
 ## Installation
-1. In the "assets/global.js" file, find the following line "class VariantSelects", find the closing "}" a few lines blow this and select a block through to the "onVariantChange() {" line. See below reference example:
-![Step 1](/dynamic-selects-step-1.png?v=1)
-2. Copy and paste the contents of [this file](/global-addition.js) and replace the selected block in Step 1.
-3. And that's all, folks! Enjoy!
+1. Find and edit the "assets/global.js" file in your Dawn theme.
+2. Find the line containing "class VariantSelects", we will be making modifications to this class.
+2. Copy the contents of [this file](/global-modify-step-1.js) and paste it just **BEFORE** the closing "}" of the "constructor" function. 
+3. Copy the contents of [this file](/global-modify-step-2.js) and paste it just **AFTER** the closing "}" of the "constructor" function.
+4. Your "constructor" function should now look like this:
+
+![Step 1 & 2](/dynamic-selectors-step-1-2.png)
+
+5. Find the "onVariantChange()" function, we will be modifying the end of this function.
+6. Copy the contents of [this file](/global-modify-step-3.js) and paste it just **BEFORE** the closing "}" of the "onVariantChange" function.
+7. Your "onVariantChange" function should now look like this:
+
+![Step 3](/dynamic-selectors-step-3.png)
+
+8. And that's all, folks! Enjoy!
