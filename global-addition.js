@@ -1,9 +1,8 @@
-    /* *** Dynamic Selectors Start *** */
+    /* *** Dynamic Selectors - Part 1 - Start *** */
     this.rebuildOptions();
-    /* *** Dynamic Selectors End *** */
-  }
+    /* *** Dynamic Selectors - Part 1 - End *** */
 
-    /* *** Dynamic Selectors Start *** */
+    /* *** Dynamic Selectors - Part 2 - Start *** */
     rebuildOptions() {
         //get the option sets (option1, option2 etc)
         const fieldsets = document.querySelectorAll('fieldset.product-form__input');
@@ -15,23 +14,28 @@
         });
 
         //loop through the option sets
-        fieldsets.forEach((fieldset, index) => {
+        for (var i = 0, count = fieldsets.length, change = false; i < count && !change; i++) {
+            const fieldset = fieldsets[i];
             //only run if there is more than one option set
-            if(index > 0) {
+            if(i > 0) {
                 const inputs = fieldset.querySelectorAll('input');
                 inputs.forEach(input => {
                     //get the label for the current input and hide it if it is not a valid combo option
                     const label = fieldset.querySelector(`label[for="${input.id}"]`);
-                    if(this.validCombo(input.value,index,selectedOptions) == false ? label.style.display = "none" : label.style.display = "");
+                    if(this.validCombo(input.value,i,selectedOptions) == false) {
+                      if(input.checked == true){
+                        const firstValidOption = fieldset.querySelector('input:not(.disabled)');
+                        firstValidOption.checked = true;
+                        change = true;
+                        this.onVariantChange();
+                      }
+                      label.style.display = "none";
+                    } else {
+                      label.style.display = "";
+                    }
                 });
-
-                //if the option set before the current one has an invalid option selected, then there will be no valid options on the current set, so hide the option's legend (title)
-                const legend = fieldset.querySelector('legend');
-                const masterSelectInput = fieldsets[index - 1].querySelector('input:checked');
-                const masterSelectLabel = fieldsets[index - 1].querySelector(`label[for="${masterSelectInput.id}"]`);
-                if(masterSelectLabel.style.display == 'none' ? legend.classList.add('hidden') : legend.classList.remove('hidden'));
             }
-        });
+        };
     }
 
     validCombo(inputValue,optionLevel,selectedOptions) {
@@ -53,9 +57,8 @@
         }
         return validCombo;
     }
-    /* *** Dynamic Selectors End *** */
+    /* *** Dynamic Selectors - Part 2 - End *** */
 
-  onVariantChange() {
-    /* *** Dynamic Selectors Start *** */
+    /* *** Dynamic Selectors - Part 3 - Start *** */
     this.rebuildOptions();
-    /* *** Dynamic Selectors End *** */
+    /* *** Dynamic Selectors - Part 3 - End *** */
