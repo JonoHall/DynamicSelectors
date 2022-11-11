@@ -4,7 +4,7 @@ This small JS hack will modify Shopify's option system to dynamically hide optio
 ## Desired Outcome
 By the end of this installation, you too can have user friendly option lists.
 
-![Dynamic Selectors in action](/dynamic-selectors.gif?v=4)
+![Dynamic Selectors in action](/dynamic-selectors.gif?v=5)
 
 ## Prerequisites
 1. Shopify 2.0 Dawn Theme (currently tested on 7.x).
