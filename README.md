@@ -13,7 +13,8 @@ By the end of this installation, you too can have user friendly option lists.
 ## Warnings
 1. *This is an advanced tutorial and should only be done if you have some understanding of coding.* 
 2. USE AT YOUR OWN RISK. The author of this file cannot offer guarantees, warranties, compensation for any loss of income, or any support for using this hack.
-3. This modification is done directly to one of Shopify's files, if this file is modified by Shopify in an update, it may stop working or conflict with Shopify's functionality. 
+3. This modification is done directly to one of Shopify's files, if this file is modified by Shopify in an update, it may stop working or conflict with Shopify's functionality.
+4. Keep an eye out for changes on this repository, there may be bug fixes.
 
 If you have any issues with this code, simply remove any code blocks marked "Dynamic Selectors Start"/"Dynamic Selectors End"
 
